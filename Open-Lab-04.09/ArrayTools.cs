@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace Open_Lab_04._09
 {
@@ -6,7 +7,16 @@ namespace Open_Lab_04._09
     {
         public string[] RemoveDups(string[] strings)
         {
-            throw new NotImplementedException();
+            List<string> lists = new List<string>();
+            foreach (string str in strings)
+            {
+                if (!lists.Contains(str))
+                {
+                    lists.Add(str);
+                }
+            }
+
+            return lists.ToArray();
         }
     }
 }
